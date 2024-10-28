@@ -21,3 +21,6 @@ Route::get('anjay', function () {
 });
 
 Route::post('/login', [LoginController::class, 'login']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
